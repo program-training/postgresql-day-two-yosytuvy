@@ -12,7 +12,10 @@ CREATE TABLE students (
     first_name TEXT NOT NULL,
     last_name TEXT NOT NULL,
     date_of_birth DATE,
-    email TEXT UNIQUE
+    email TEXT UNIQUE,
+    studyGroup_id INTEGER,
+
+    FOREIGN KEY (studyGroup_id) REFERENCES (studyGroup.studyGroup_id)
 );
 
 INSERT INTO students(first_name, last_name, date_of_birth, email)
