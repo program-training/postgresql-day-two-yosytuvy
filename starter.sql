@@ -38,3 +38,18 @@ INSERT INTO teachers(first_name, last_name, date_of_birth, email, department, hi
 VALUES ('Professor', 'Anderson', '1975-04-08', 'prof.anderson@example.com', 'Computer Science', '2010-08-15'),
        ('Dr. Sarah', 'Wilson', '1980-12-20' ,'sarah.wilson@example.com', 'Mathematics', '2015-05-02'),
        ('Mr. James', 'Brown','1978-06-14', 'james.brown@example.com', 'History', '2009-11-11');
+
+
+-- 3
+
+CREATE TABLE courses (
+    course_id SERIAL PRIMARY KEY,
+    course_name TEXT NOT NULL,
+    department TEXT,
+    credits NUMERIC
+);
+
+INSERT INTO courses(course_name, department, credits)
+VALUES ('Introduction to Programming', 'Computer Science', 3),
+       ('Calculus I', 'Mathematics', 4),
+       ('World History', 'History', 3);
