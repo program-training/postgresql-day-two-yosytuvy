@@ -30,3 +30,21 @@ INSERT INTO teacherCourse(teacher_id, course_id)
 VALUES (1, 1),
        (2, 2),
        (3, 3);
+
+-- 3
+CREATE TABLE grades(
+    grade_id SERIAL PRIMARY KEY,
+    student_id INTEGER,
+    course_id INTEGER,
+    grade INTEGER,
+    FOREIGN KEY (student_id) REFERENCES students(student_id),
+    FOREIGN KEY (course_id) REFERENCES courses(course_id)
+);
+
+SELECT * FROM students;
+
+INSERT INTO grades(student_id, course_id, grade)
+VALUES (1, 3, 80),
+       (2, 1, 97),
+       (3, 2, 76),
+       (4, 3, 83);
